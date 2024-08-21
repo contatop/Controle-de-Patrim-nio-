@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Patrimônio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Patrimônio</h1>
+        <form id="patrimonio-form">
+            <input type="text" id="item" placeholder="Nome do Item" required>
+            <input type="number" id="valor" placeholder="Valor" required>
+            <input type="date" id="data-aquisicao" placeholder="Data de Aquisição" required>
+            <input type="text" id="image-url" placeholder="URL da Imagem">
+            <button type="submit">Adicionar Item</button>
+        </form>
+        <button id="download-all" onclick="downloadAllQRCodes()">Baixar Todos os QR Codes</button>
+        <table id="patrimonio-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Valor</th>
+                    <th>Data de Aquisição</th>
+                    <th>Imagem</th>
+                    <th>Ações</th>
+                    <th>Qrcode</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
